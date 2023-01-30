@@ -2,12 +2,12 @@ var myChart = echarts.init(document.getElementById('yes'));
 
 myChart.showLoading();
 
-fetch('https://raw.githubusercontent.com/crispynoodlesoup/CrystalView-/master/public/data/predictall2.json')
+fetch('https://raw.githubusercontent.com/crispynoodlesoup/CrystalView-/master/public/data/all2.json')
   .then((response) => response.json())
   .then(function (data) {
 
     myChart.hideLoading();
-    
+
 /*
 slight formatting needed
 {
