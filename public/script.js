@@ -19,7 +19,7 @@ const auth = getAuth(app);
 
 const provider = new GoogleAuthProvider();
 
-
+/*
 const button = document.querySelector(".yeah");
 button.addEventListener("click", (e) => {
   signInWithPopup(auth, provider)
@@ -40,17 +40,18 @@ button.addEventListener("click", (e) => {
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
-});
+});*/
 
-const thing = document.querySelector(".creator-text");
+const thing = document.querySelector(".pls");
 thing.addEventListener("click", (e) => {
   window.location.href = 'userDash.html';
   console.log("yes this is running");
 });
 
+/*
 auth.onAuthStateChanged(user => {
   if(user) {
     window.location.href = 'userDash.html';
   }
 });
-
+*/
