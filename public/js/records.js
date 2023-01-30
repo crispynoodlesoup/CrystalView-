@@ -72,7 +72,7 @@ console.log(dateObj);
 
     var option = {
       title: {
-        text: "A Prediction of Your Year of spending",
+        text: "Your Financial Record",
         left: "center"
       },
       tooltip: {

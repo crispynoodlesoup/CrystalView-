@@ -1,4 +1,4 @@
-var myChart = echarts.init(document.getElementById('yes'));
+var myChart = echarts.init(document.getElementById('predict'));
 
 myChart.showLoading();
 
@@ -23,21 +23,20 @@ let dateObj = {};
 for(let i = 0; i < data.length; i++) {
   let dateArr = Object.keys(data[i]);
   let amountArr = Object.values(data[i]);
-  console.log(dateArr);
   for(let j = 0; j < dateArr.length; j++) {
     if(!(dateArr[j] in dateObj))
       dateObj[dateArr[j]] = {};
     
     if(i === 0)
-      dateObj[dateArr[j]]["bills"] = Number.parseFloat(amountArr[j]);
+      dateObj[dateArr[j]]["bills"] = Number.parseFloat(Number.parseFloat(amountArr[j]).toFixed(2));
     else if(i === 1)
-      dateObj[dateArr[j]]["entertainment"] = Number.parseFloat(amountArr[j]);
+      dateObj[dateArr[j]]["entertainment"] = Number.parseFloat(Number.parseFloat(amountArr[j]).toFixed(2));
     else if(i === 2)
-      dateObj[dateArr[j]]["food"] = Number.parseFloat(amountArr[j]);
+      dateObj[dateArr[j]]["food"] = Number.parseFloat(Number.parseFloat(amountArr[j]).toFixed(2));
     else if(i === 3)
-      dateObj[dateArr[j]]["savings"] = Number.parseFloat(amountArr[j]);
+      dateObj[dateArr[j]]["savings"] = Number.parseFloat(Number.parseFloat(amountArr[j]).toFixed(2));
     else if(i === 4)
-      dateObj[dateArr[j]]["shopping"] = Number.parseFloat(amountArr[j]);
+      dateObj[dateArr[j]]["shopping"] = Number.parseFloat(Number.parseFloat(amountArr[j]).toFixed(2));
   }
 }
 
@@ -72,7 +71,7 @@ console.log(dateObj);
 
     var option = {
       title: {
-        text: "A Prediction of Your Year of spending",
+        text: "A Prediction of Your Future spending",
         left: "center"
       },
       tooltip: {
