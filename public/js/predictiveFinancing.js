@@ -2,7 +2,7 @@ var myChart = echarts.init(document.getElementById('predict'));
 
 myChart.showLoading();
 
-fetch('https://raw.githubusercontent.com/crispynoodlesoup/CrystalView-/master/public/data/predictall2.json')
+fetch('https://raw.githubusercontent.com/crispynoodlesoup/CrystalView-/master/public/data/peytonpredict.json')
   .then((response) => response.json())
   .then(function (data) {
 
@@ -71,7 +71,7 @@ console.log(dateObj);
 
     var option = {
       title: {
-        text: "A Prediction of Your Future spending",
+        text: "A Prediction of Your Future Spending",
         left: "center"
       },
       tooltip: {
