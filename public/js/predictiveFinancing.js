@@ -103,6 +103,7 @@ console.log(dateObj);
       },
       series: [
         {
+          name: 'Bills',
           type: 'bar',
           stack: "yes",
           data: bills,
@@ -110,6 +111,7 @@ console.log(dateObj);
           large: true
         },
         {
+          name: 'Entertainment',
           type: 'bar',
           stack: "yes",
           data: entertainment,
@@ -117,6 +119,7 @@ console.log(dateObj);
           large: true
         },
         {
+          name: 'Food',
           type: 'bar',
           stack: "yes",
           data: food,
@@ -124,6 +127,7 @@ console.log(dateObj);
           large: true
         },
         {
+          name: 'Savings',
           type: 'bar',
           stack: "yes",
           data: savings,
@@ -131,6 +135,7 @@ console.log(dateObj);
           large: true
         },
         {
+          name: 'Shopping',
           type: 'bar',
           stack: "yes",
           data: shopping,
